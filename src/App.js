@@ -5,13 +5,14 @@ import Post from './components/views/Post';
 import PostAdd from './components/views/PostAdd';
 import PostEdit from './components/views/PostEdit';
 import NotFoundPage from './components/views/NotFoundPage';
+import { Container } from 'react-bootstrap';
+import Header from './components/views/Header';
+import Footer from './components/views/Footer';
 
 function App() {
   return (
-    <main>
-      <div>
-        <p>hello</p>
-      </div>
+    <Container>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -20,7 +21,8 @@ function App() {
         <Route path="/post/edit/:id" element={<PostEdit />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-    </main>
+      <Footer />
+    </Container>
   );
 }
 
