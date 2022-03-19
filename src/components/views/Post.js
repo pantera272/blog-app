@@ -1,8 +1,8 @@
+import ShowPostById from "../features/ShowPostById";
+
 const Post = () => {
   return (
-    <div>
-      post
-    </div>
+    <ShowPostById />
   )
 }
 

@@ -6,7 +6,7 @@ import { getAllPost } from "../../redux/postsReducer";
 const ShowAllPost = () => {
 
   const posts = useSelector(getAllPost);
-  console.log(posts);
+
   return (
     <Row>
     {posts.map(post =>(
