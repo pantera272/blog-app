@@ -3,6 +3,7 @@ import { Container, Row, Col, Button, Modal } from "react-bootstrap"
 import { useSelector, useDispatch } from "react-redux";
 import { Navigate, NavLink, useParams } from "react-router-dom";
 import { deletePost, getPostById } from "../../redux/postsReducer";
+import { dateToString } from "../../utils/dateToString";
 
 const ShowPostById = () => {
   const {id} = useParams();
@@ -58,10 +59,10 @@ const ShowPostById = () => {
             <Col><b>Author:</b> {post.author}</Col>
           </Row>
           <Row>
-            <Col><b>Published:</b> {post.publishedDate}</Col>
+            <Col><b>Published:</b> {dateToString(post.publishedDate)}</Col>
           </Row>
           <Row style={{marginTop: "20px"}}>
-            <Col>{post.content}</Col>
+            <Col><p dangerouslySetInnerHTML={{ __html: post.content }} /></Col>
           </Row>
         </Container>
       </>
