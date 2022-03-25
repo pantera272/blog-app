@@ -61,6 +61,9 @@ const ShowPostById = () => {
           <Row>
             <Col><b>Published:</b> {dateToString(post.publishedDate)}</Col>
           </Row>
+          <Row>
+            <Col><b>Category:</b> {post.category}</Col>
+          </Row>
           <Row style={{marginTop: "20px"}}>
             <Col><p dangerouslySetInnerHTML={{ __html: post.content }} /></Col>
           </Row>
